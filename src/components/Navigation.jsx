@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Navigation() {
 	const [expanded, setExpanded] = useState(false);
@@ -9,19 +10,24 @@ function Navigation() {
 			<Navbar expanded={expanded} onToggle={() => setExpanded(!expanded)} fixed="top" expand="lg" className="bg-body-secondary">
 				<Container>
 					<Navbar.Brand className="">
-						<Nav.Link>
-							<a href="#" style={{ marginRight: "0.5rem", pointerEvents: "none" }}>
-								<i className="fa-solid fa-handshake-angle fa-xl"></i>
-							</a>
-							Platforma za volontiranje
-						</Nav.Link>
+						<Link to="/forum" className="nav-link">
+							CampusHub
+						</Link>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto">
-							<Nav.Link>Aktivnosti</Nav.Link>
-							<Nav.Link>Volonteri</Nav.Link>
-							<Nav.Link>Udruge</Nav.Link>
+							<Link to="/dokumenti" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
+								Dokumenti
+							</Link>
+
+							<Link to="/forum" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
+								Forum
+							</Link>
+
+							<Link to="/myaccount" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
+								Moj Račun
+							</Link>
 						</Nav>
 						<Nav className="ml-auto"></Nav>
 					</Navbar.Collapse>
