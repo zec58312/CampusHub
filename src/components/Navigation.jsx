@@ -10,18 +10,18 @@ function Navigation() {
 			<Navbar expanded={expanded} onToggle={() => setExpanded(!expanded)} fixed="top" expand="lg" className="bg-body-secondary">
 				<Container>
 					<Navbar.Brand className="">
-						<Link to="/forum" className="nav-link">
+						<Link to="/" className="nav-link">
 							CampusHub
 						</Link>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto">
-							<Link to="/dokumenti" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
+							<Link to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`} onClick={() => setExpanded(false)}>
 								Dokumenti
 							</Link>
 
-							<Link to="/forum" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
+							<Link to="/forum" className={`nav-link ${location.pathname === "/forum" ? "active" : ""}`} onClick={() => setExpanded(false)}>
 								Forum
 							</Link>
 
