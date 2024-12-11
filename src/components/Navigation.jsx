@@ -10,7 +10,8 @@ function Navigation() {
 			<Navbar expanded={expanded} onToggle={() => setExpanded(!expanded)} fixed="top" expand="lg" className="bg-body-secondary">
 				<Container>
 					<Navbar.Brand className="">
-						<Link to="/" className="nav-link">
+						<img src="src/assets/logoBijeleOci.png" height="45rem" className="d-inline-block align-middle" alt="Sova" />
+						<Link to="/" className="nav-link d-inline-block align-middle">
 							CampusHub
 						</Link>
 					</Navbar.Brand>

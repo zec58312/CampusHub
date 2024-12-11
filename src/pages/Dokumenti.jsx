@@ -9,13 +9,13 @@ function Dokumenti() {
 			<Container className="p-0">
 				<Container fluid className="bg-body-secondary rounded-4 mb-3 p-4">
 					<Row>
-						<h1 className="mb-4" style={{ textAlign: "left" }}>
-							Ovde ce bit filteri
-						</h1>
+						<h3 className="mb-4" style={{ textAlign: "left" }}>
+							Odaberi kolegij
+						</h3>
 					</Row>
 					<Row>
 						<Col style={{ textAlign: "left" }}>
-							<p>aaaaaaaaaaaaaa</p>
+							<form></form>
 						</Col>
 					</Row>
 				</Container>

@@ -3,7 +3,7 @@ import { Col, Card, Image, ListGroup, Button } from "react-bootstrap";
 
 function DocumentCard(props) {
 	return (
-		<Col className="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+		<Col className="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 ">
 			<div className="col row">
 				<div className="col-lg-3 col-md-4 col-sm-4 col-6 mb-3 p-1">
 					<Card className="" style={{ minWidth: "10rem" }}>

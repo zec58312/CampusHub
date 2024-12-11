@@ -3,72 +3,50 @@ import { Container, Row, Col } from "react-bootstrap";
 
 //dizajn kopiran s https://mdbootstrap.com/docs/standard/navigation/footer/
 
+//col-xl-6 col-lg-12
+
 function Footer() {
 	return (
 		<>
-			<Container fluid className="bg-dark-subtle position-absolute w-100 h-auto p-4" style={{ bottom: 0 }}>
+			<Container fluid className="bg-dark-subtle position-relative w-100 h-auto p-4 text-center" style={{ bottom: 0 }}>
 				<Row>
-					<Col className="col-lg-6 col-md-12 mb-4 mb-md-0">
-						<h5 className="text-uppercase">Footer Content</h5>
+					<Col className="col-xl-6 col-lg-12 ">
+						<h5 className="text-uppercase">Naš cilj</h5>
 
-						<p>
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam voluptatem veniam, est atque
-							cumque eum delectus sint!
-						</p>
+						<p>Olakšati studentski život.</p>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea voluptatem veniam, est atque cumque eum delectus sint!</p>
 					</Col>
 
-					<Col className="col-lg-3 col-md-6 mb-4 mb-md-0">
-						<h5 className="text-uppercase">Links</h5>
+					<Col className="col-xl-6 col-lg-12 ">
+						<Row>
+							<h5 className="text-uppercase mb-0">Upoznaj dev tim</h5>
+						</Row>
 
-						<ul className="list-unstyled mb-0">
-							<li>
-								<a href="#!" className="text-body">
-									Link 1
-								</a>
-							</li>
-							<li>
-								<a href="#!" className="text-body">
-									Link 2
-								</a>
-							</li>
-							<li>
-								<a href="#!" className="text-body">
-									Link 3
-								</a>
-							</li>
-							<li>
-								<a href="#!" className="text-body">
-									Link 4
-								</a>
-							</li>
-						</ul>
-					</Col>
+						<Row className="list-unstyled d-flex">
+							<a href="#!" className="text-body">
+								Lana Danolić
+							</a>
 
-					<Col className="col-lg-3 col-md-6 mb-4 mb-md-0">
-						<h5 className="text-uppercase mb-0">Links</h5>
+							<a href="#!" className="text-body">
+								Duje Masnov
+							</a>
 
-						<ul className="list-unstyled">
-							<li>
-								<a href="#!" className="text-body">
-									Link 1
-								</a>
-							</li>
-							<li>
-								<a href="#!" className="text-body">
-									Link 2
-								</a>
-							</li>
-							<li>
-								<a href="#!" className="text-body">
-									Link 3
-								</a>
-							</li>
-							<li>
-								<a href="#!" className="text-body">
-									Link 4
-								</a>
-							</li>
-						</ul>
+							<a href="#!" className="text-body">
+								Maja Nakić
+							</a>
+
+							<a href="#!" className="text-body">
+								Igor Rako
+							</a>
+
+							<a href="#!" className="text-body">
+								Marina Skorić
+							</a>
+
+							<a href="#!" className="text-body">
+								Željka Vuković
+							</a>
+						</Row>
 					</Col>
 				</Row>
 			</Container>
