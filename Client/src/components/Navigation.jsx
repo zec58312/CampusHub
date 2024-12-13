@@ -17,7 +17,7 @@ function Navigation() {
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
-						<Nav className="me-auto">
+						<Nav className="me-auto ">
 							<Link to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`} onClick={() => setExpanded(false)}>
 								Dokumenti
 							</Link>
@@ -29,6 +29,7 @@ function Navigation() {
 							<Link to="/myaccount" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
 								Moj Račun
 							</Link>
+							<i class="fa-solid fa-user"></i>
 						</Nav>
 						<Nav className="ml-auto"></Nav>
 					</Navbar.Collapse>

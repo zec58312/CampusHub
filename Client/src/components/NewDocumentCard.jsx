@@ -3,7 +3,7 @@ import { Col, Row, Container, Card, Image, ListGroup, Button } from "react-boots
 
 function NewDocumentCard({ ime, autor, kolegij, glasovi, postotak, datum, opis }) {
 	return (
-		<Container fluid className="border-warning-1">
+		<Container fluid>
 			<Card>
 				<Card.Header as="h6">{kolegij}</Card.Header>
 				<Card.Body>
@@ -18,7 +18,7 @@ function NewDocumentCard({ ime, autor, kolegij, glasovi, postotak, datum, opis }
 						<Col>
 							{postotak}% od {glasovi} glasača
 						</Col>
-						<Col>thumbs up</Col>
+						<Col>thumbs</Col>
 						<Col>
 							<Button variant="primary">Download</Button>
 						</Col>
