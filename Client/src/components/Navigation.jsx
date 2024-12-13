@@ -29,7 +29,6 @@ function Navigation() {
 							<Link to="/myaccount" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
 								Moj Račun
 							</Link>
-							<i class="fa-solid fa-user"></i>
 						</Nav>
 						<Nav className="ml-auto"></Nav>
 					</Navbar.Collapse>
