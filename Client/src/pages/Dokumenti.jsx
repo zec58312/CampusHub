@@ -1,9 +1,17 @@
 import React from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import NewDocumentCard from "../components/NewDocumentCard";
 import FilterForm from "../components/FilterForm";
 import { Container, Row, Col } from "react-bootstrap";
 
 function Dokumenti() {
+	const [dokumenti, postaviDokumente] = useState([]);
+
+	useEffect(() => {
+		axios.get("").then((res) => postaviDokumente(res.data)); //dodati link na API
+	}, []);
+
 	return (
 		<>
 			<Container className="p-0 mx-lg-5">
@@ -14,24 +22,11 @@ function Dokumenti() {
 						</h3>
 						<FilterForm />
 					</Row>
-					<Row>
-						<Col style={{ textAlign: "left" }}>
-							<form></form>
-						</Col>
-					</Row>
 				</Container>
 				<Row className="d-flex flex-wrap">
-					<NewDocumentCard
-						ime="MojDokument.pdf"
-						autor="Ana&nbsp;Anić"
-						postotak="75"
-						glasovi="80"
-						datum="1.12.2024."
-						opis="Lorem ipsum ewuofh siof  es wf dg erwefwfe sdfsdfadq efwef"
-						kolegij="Programiranje"
-					></NewDocumentCard>
-					<NewDocumentCard ime="SkriptaRadnaVerzija.pdf" autor="Ivo&nbsp;Ivić" postotak="91" glasovi="100" datum="11.11.2024." opis="Kratki opis" kolegij="Programsko Inženjerstvo"></NewDocumentCard>
-					<NewDocumentCard ime="NajboljaSkriptaIkad.pdf" autor="Marija&nbsp;Marić" postotak="20" glasovi="10" datum="1.12.2024." opis="No comment." kolegij="Programiranje 2"></NewDocumentCard>
+					{dokumenti.map((d) => (
+						<NewDocumentCard key={d.documentID} dokumenti={d} />
+					))}
 				</Row>
 			</Container>
 		</>

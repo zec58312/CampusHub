@@ -3,7 +3,14 @@ import { Col, Row, Container, Card, Button } from "react-bootstrap";
 
 // fa-flip, fa-beat... - za animaciju ikona
 
-function NewDocumentCard({ ime, autor, kolegij, glasovi, postotak, datum, opis }) {
+function NewDocumentCard({ dokumenti }) {
+	// 	const handleDownload = () => {
+	// 		// useEffect(() => {
+	// 		// 	axios.get(`http://localhost:3001/${dokumenti.fileURL}`).then((res) => postaviRezervacije(res.data));
+	// 		// }, []);
+	// 		window.open({dokumenti.fileURL}, '_self');
+	// 	};
+
 	return (
 		<Container fluid className="mb-3">
 			<Card>
@@ -13,14 +20,14 @@ function NewDocumentCard({ ime, autor, kolegij, glasovi, postotak, datum, opis }
 						<Col md="3" sm="3">
 							{/*primjeniti isto na glasove*/}
 							<Card.Title className="mb-0" style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", lineHeight: "normal" }}>
-								{ime}
+								{dokumenti.ime}
 							</Card.Title>
 						</Col>
 						<Col md="2" sm="3" className="text-muted">
-							<i>autor: {autor}</i>
+							<i>autor: {dokumenti.autor}</i>
 						</Col>
 						<Col md="2" sm="3" className="text-muted">
-							objavljeno: {datum}
+							objavljeno: {dokumenti.datum}
 						</Col>
 					</Row>
 
@@ -32,18 +39,25 @@ function NewDocumentCard({ ime, autor, kolegij, glasovi, postotak, datum, opis }
 					</Row>
 					<Row className="align-items-end">
 						<Col md="3" sm="3" className="text-muted">
-							{postotak}% pozitivnih glasova od {glasovi}
+							{dokumenti.postotak}% pozitivnih glasova od {dokumenti.glasovi}
+							{/* prepraviti kada dodamo glasove u bazu */}
 						</Col>
 						<Col className="d-flex text-primary">
 							<div className="mx-2">
-								<i className=" fa-regular fa-thumbs-down fa-flip-horizontal fa-xl"></i>
+								<i className=" fa-regular fa-thumbs-down fa-flip-horizontal fa-xl" />
 							</div>
 							<div>
-								<i className="fa-regular fa-thumbs-up fa-xl" style={{ transform: "translateY(-5px)" }}></i>
+								<i className="fa-regular fa-thumbs-up fa-xl" style={{ transform: "translateY(-5px)" }} />
 							</div>
 						</Col>
 						<Col className="d-flex flex-row-reverse">
-							<Button variant="primary">Download</Button>
+							<a href={"http://localhost:3001/" + dokumenti.fileURL} download>
+								{/* mozda nece biti tocan link */}
+								<Button variant="primary">
+									<i className="fa-regular fa-download" />
+									Download
+								</Button>
+							</a>
 						</Col>
 					</Row>
 				</Card.Body>
