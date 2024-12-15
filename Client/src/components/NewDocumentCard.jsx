@@ -43,7 +43,12 @@ function NewDocumentCard({ ime, autor, kolegij, glasovi, postotak, datum, opis }
 							</div>
 						</Col>
 						<Col className="d-flex flex-row-reverse">
-							<Button variant="primary">Download</Button>
+							<a href="/images/myw3schoolsimage.jpg" download>
+								<Button variant="primary">
+									Download&nbsp;
+									<i className="fa-solid fa-download fa-sm " />
+								</Button>
+							</a>
 						</Col>
 					</Row>
 				</Card.Body>

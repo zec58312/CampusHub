@@ -10,42 +10,64 @@ function Footer() {
 		<>
 			<Container fluid className="bg-dark-subtle position-relative w-100 h-auto p-4 text-center" style={{ bottom: 0 }}>
 				<Row>
-					<Col className="col-xl-6 col-lg-12 ">
+					<Col sm={12} md={6}>
 						<h5 className="text-uppercase">Naš cilj</h5>
 
-						<p>Olakšati studentski život.</p>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea voluptatem veniam, est atque cumque eum delectus sint!</p>
+						<p>Olakšati studentski život i dijeliti znanje na jednostavan način.</p>
+						<p>Razviti aplikaciju kakvu smo i sami htjeli imati.</p>
+						<p></p>
 					</Col>
 
-					<Col className="col-xl-6 col-lg-12 ">
+					<Col sm={12} md={6} className="d-flex flex-column align-items-center">
 						<Row>
-							<h5 className="text-uppercase mb-0">Upoznaj dev tim</h5>
+							<h5 className="text-uppercase">
+								Upoznaj dev tim&nbsp;
+								<i class="fa-brands fa-github" />
+							</h5>
 						</Row>
 
-						<Row className="list-unstyled d-flex">
-							<a href="#!" className="text-body">
-								Lana Danolić
-							</a>
+						<Row style={{ maxWidth: "20rem" }}>
+							<Col className="mx-3">
+								<h6 className="mb-0">FRONTEND:</h6>
+								<ul className="list-unstyled">
+									<li>
+										<a href="https://github.com/mnakicgit" className="text-body">
+											Maja&nbsp;Nakić
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/lanadanolic" className="text-body">
+											Lana&nbsp;Danolić
+										</a>
+									</li>
+								</ul>
+							</Col>
+							<Col className="mx-3">
+								<h6 className="mb-0">BACKEND:</h6>
+								<ul className="list-unstyled">
+									<li>
+										<a href="https://github.com/due1337" className="text-body">
+											Duje&nbsp;Masnov
+										</a>
+									</li>
 
-							<a href="#!" className="text-body">
-								Duje Masnov
-							</a>
-
-							<a href="#!" className="text-body">
-								Maja Nakić
-							</a>
-
-							<a href="#!" className="text-body">
-								Igor Rako
-							</a>
-
-							<a href="#!" className="text-body">
-								Marina Skorić
-							</a>
-
-							<a href="#!" className="text-body">
-								Željka Vuković
-							</a>
+									<li>
+										<a href="https://github.com/irako00" className="text-body">
+											Igor&nbsp;Rako
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/aniram-ciroks" className="text-body">
+											Marina&nbsp;Skorić
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/zec58312" className="text-body">
+											Željka&nbsp;Vuković
+										</a>
+									</li>
+								</ul>
+							</Col>
 						</Row>
 					</Col>
 				</Row>
