@@ -6,6 +6,8 @@ import BareLayout from "./layouts/BareLayout";
 import Dokumenti from "./pages/Dokumenti";
 import Forum from "./pages/Forum";
 import MyAccount from "./pages/MyAccount";
+import ViewDocument from "./components/ViewDocument";
+import NewDocumentCard from "./components/NewDocumentCard";
 
 function App() {
 	return (
@@ -16,6 +18,10 @@ function App() {
 					<Route path="/forum" element={<Forum />} />
 					<Route path="/myaccount" element={<MyAccount />} />
 				</Route>
+
+				<Route path="/view-document" element={<ViewDocument />} />
+
+				<Route path="/" element={<NewDocumentCard />} />
 			</Routes>
 		</BrowserRouter>
 	);

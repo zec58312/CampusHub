@@ -12,16 +12,18 @@ function Navigation() {
 				onToggle={() => setExpanded(!expanded)}
 				fixed="top"
 				expand="lg"
-				// style={{ background: "rgb(2,0,36)", background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(0,255,179,1) 100%)" }}
+				style={{ background: " rgb(183,223,197)", background: "linear-gradient(90deg, rgba(183,223,197,1) 20%, rgba(10,125,154,1) 60%, rgba(4,50,110,1) 100%)" }}
 			>
 				<Container>
 					<Navbar.Brand className="">
 						<img src="src/assets/logoBijeleOci.png" height="45rem" className="d-inline-block align-middle" alt="Sova" />
-						<Link to="/" className="nav-link d-inline-block align-middle">
-							CampusHub
-						</Link>
+						<b>
+							<Link to="/" className="nav-link d-inline-block align-middle">
+								CampusHub
+							</Link>
+						</b>
 					</Navbar.Brand>
-					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: "#b7dfc5" }} />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto ">
 							<Link to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`} onClick={() => setExpanded(false)}>
