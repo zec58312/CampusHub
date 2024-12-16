@@ -7,7 +7,13 @@ function Navigation() {
 
 	return (
 		<>
-			<Navbar expanded={expanded} onToggle={() => setExpanded(!expanded)} fixed="top" expand="lg" className="bg-body-secondary">
+			<Navbar
+				expanded={expanded}
+				onToggle={() => setExpanded(!expanded)}
+				fixed="top"
+				expand="lg"
+				// style={{ background: "rgb(2,0,36)", background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(0,255,179,1) 100%)" }}
+			>
 				<Container>
 					<Navbar.Brand className="">
 						<img src="src/assets/logoBijeleOci.png" height="45rem" className="d-inline-block align-middle" alt="Sova" />

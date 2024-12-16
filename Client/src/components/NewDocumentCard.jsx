@@ -43,7 +43,7 @@ function NewDocumentCard({ ime, autor, kolegij, glasovi, postotak, datum, opis }
 							</div>
 						</Col>
 						<Col className="d-flex flex-row-reverse">
-							<a href="/images/myw3schoolsimage.jpg" download>
+							<a href="/primjer.pdf" download>
 								<Button variant="primary">
 									Download&nbsp;
 									<i className="fa-solid fa-download fa-sm " />
