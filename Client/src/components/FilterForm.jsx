@@ -33,7 +33,7 @@ function FilterForm({ applyFilters }) {
 
 	return (
 		<Form>
-			<Row>
+			<Row xs={1} sm={2} md={2} lg={4}>
 				<Col>
 					<Form.Select className="mb-2" aria-label="Odabir fakulteta" name="fakultet" value={fakultet} onChange={handleFilterChange}>
 						{/* style={{ background: "#b7dfc5" }} promijeniti kasnije */}

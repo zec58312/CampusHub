@@ -73,7 +73,7 @@ function NewDocumentCard({ ime, autor, kolegij, glasovi, datum, opis, fileUrl })
 							)}
 						</Col>
 						<Col sm="4" md="3" className="d-flex text-primary">
-							<div className={`mx-2 ${disliked ? "text-primary" : ""}`} onClick={handleDislike}>
+							<div className={`${disliked ? "text-primary" : ""}`} onClick={handleDislike}>
 								<i
 									className={`fa-regular fa-thumbs-down fa-flip-horizontal fa-xl ${disliked ? "fa-solid" : "fa-regular"}`}
 									style={{
@@ -83,7 +83,7 @@ function NewDocumentCard({ ime, autor, kolegij, glasovi, datum, opis, fileUrl })
 							</div>
 							<div onClick={handleLike}>
 								<i
-									className={`fa-thumbs-up fa-xl  ${liked ? "fa-solid" : "fa-regular"}`}
+									className={`fa-thumbs-up fa-xl mx-2  ${liked ? "fa-solid" : "fa-regular"}`}
 									style={{
 										transform: "translateY(-5px)",
 										cursor: "pointer",
