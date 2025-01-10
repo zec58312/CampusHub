@@ -69,7 +69,7 @@ function NewDocumentCard({ ime, autor, kolegij, glasovi, datum, opis, fileUrl })
 									{likePercentage}% od {totalVotes} korisnika je označilo pozitivno ovaj dokument
 								</div>
 							) : (
-								"Nema glasova još"
+								"Nema glasova"
 							)}
 						</Col>
 						<Col sm="4" md="3" className="d-flex text-primary">

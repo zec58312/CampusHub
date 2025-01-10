@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import UserContext from "../UserContext";
 
 function Navigation() {
 	const [expanded, setExpanded] = useState(false);
+	const user = useContext(UserContext);
 
 	return (
 		<>
@@ -25,7 +27,7 @@ function Navigation() {
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: "#b7dfc5" }} />
 					<Navbar.Collapse id="basic-navbar-nav">
-						<Nav className="me-auto ">
+						<Nav className="me-auto d-flex">
 							<Link to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`} onClick={() => setExpanded(false)}>
 								Dokumenti
 							</Link>
@@ -34,11 +36,16 @@ function Navigation() {
 								Forum
 							</Link>
 
-							<Link to="/myaccount" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
-								Moj Račun
-							</Link>
+							{user === "guest" ? (
+								<Link to="/login" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
+									Prijava
+								</Link>
+							) : (
+								<Link to="/myaccount" className={`nav-link ${location.pathname === "/myaccount" ? "active" : ""}`} onClick={() => setExpanded(false)}>
+									Moj Račun
+								</Link>
+							)}
 						</Nav>
-						<Nav className="ml-auto"></Nav>
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
