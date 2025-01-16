@@ -60,7 +60,11 @@ function Dokumenti() {
 
 	return (
 		<Container className="p-0 mx-lg-5">
-			<Container fluid className=" rounded-4 mb-3 p-4" style={{ backgroundColor: "#46a0aa" }}>
+			<Container
+				fluid
+				className=" rounded-4 mb-3 p-4"
+				style={{ background: " rgb(42,157,152)", background: "linear-gradient(90deg, rgba(42,157,152,1) 0%, rgba(40,139,153,1) 52%, rgba(17,112,125,1) 100%)" }}
+			>
 				<Row>
 					<h3 className="mb-4" style={{ textAlign: "center" }}>
 						<b>Odaberi kolegij</b>
